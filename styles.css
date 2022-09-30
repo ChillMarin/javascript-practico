@@ -1,0 +1,192 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --very-light-gray: #c7c7c7;
+    --text-input-field: #f7f7f7;
+    --meditavivir-logo: #a987c1;
+    --meditavivir-light-purple: #a987c1;
+    --meditavivir-dark-purple: #824da6;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+  }
+  body {
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+  }
+  .inactive {
+    display: none !important;
+  }
+  /*menu*/
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--very-light-gray);
+  }
+  .menu {
+    display: none;
+  }
+  .logo {
+    width: 68px;
+    height: 68px;
+  }
+  .navbar-left ul,
+  .navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+  .navbar-left {
+    display: flex;
+  }
+  .navbar-left ul {
+    margin-left: 16px;
+  }
+  .navbar-left ul li a,
+  .navbar-right ul li a {
+    text-decoration: none;
+    color: var(--very-light-gray);
+    border: 1px solid var(--white);
+    padding: 8px;
+    border-radius: 9px;
+  }
+  .navbar-left ul li a:hover,
+  .navbar-right ul li a:hover {
+    border: 1px solid var(--meditavivir-dark-purple);
+    color: var(--meditavivir-logo);
+  }
+  .navbar-email {
+    color: var(--very-light-gray);
+    font-size: var(--sm);
+    margin-right: 12px;
+    cursor: pointer;
+  }
+  .navbar-email img {
+    margin-left: 10px;
+    transform: rotate(90deg);
+  }
+  .navbar-shopping-cart {
+    position: relative;
+  }
+  .navbar-shopping-cart div {
+    width: 16px;
+    height: 16px;
+    background-color: var(--meditavivir-light-purple);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Estilos del popupsito del menu o tmb llamado desktop-menu*/
+  .desktop-menu {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    background: var(--white);
+    width: 100px;
+    height: auto;
+    border: 1px solid var(--very-light-gray);
+    border-radius: 6px;
+    padding: 20px 20px 0 20px;
+  }
+  .desktop-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .desktop-menu ul li {
+    text-align: end;
+  }
+  .desktop-menu ul li:nth-child(1),
+  .desktop-menu ul li:nth-child(2) {
+    font-weight: bold;
+  }
+  .desktop-menu ul li:last-child {
+    padding-top: 20px;
+    border-top: 1px solid var(--very-light-gray);
+  }
+  .desktop-menu ul li:last-child a {
+    color: var(--meditavivir-logo);
+    font-size: var(--sm);
+  }
+  .desktop-menu ul li a {
+    color: var(--back);
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  /*menu burger mobile*/
+  .mobile-menu{
+    position: absolute;
+    top: 40px;
+    margin: 32px;
+    display: grid;
+    grid-template-rows: auto 1fr 2fr;
+    height: 90vh;
+    }
+    .mobile-menu a{
+        text-decoration: none;
+        color: var(--black);
+        font-weight: bold;
+        /*margin-bottom: 24px;*/
+    }
+    .mobile-menu ul{
+        padding: 0;
+        margin: 24px 0 0;
+        list-style: none;
+    }
+    .mobile-menu ul:nth-child(1){
+        border-bottom: 1px solid var(--very-light-gray);
+    }
+    .mobile-menu ul:nth-child(2){
+        margin-bottom: -100px;
+    }
+    .mobile-menu ul:last-child{
+        margin-top: auto;
+    }
+    .mobile-menu ul li{
+        margin-bottom: 24px;
+    }
+    .mobile-menu .email{
+        font-size: var(--sm);
+        font-weight: 300;
+    }
+    .mobile-menu .sign-out{
+        color: var(--meditavivir-dark-purple);
+        font-size: var(--sm);
+    }
+  @media (max-width: 640px) {
+    .menu {
+      display: block;
+    }
+    .navbar-left ul {
+      display: none;
+    }
+    .navbar-email {
+      display: none;
+    }
+    .navbar-shopping-cart {
+      margin-top: 10px;
+    }
+    .desktop-menu{
+        display: none;
+    }
+  }
+
+  @media (min-width: 641px) {
+    .mobile-menu{
+        display: none;
+    }
+  }
+  
